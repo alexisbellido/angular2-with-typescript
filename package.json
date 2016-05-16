@@ -6,6 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
+    "webpack": "webpack --config client/config/webpack.config.js --progress --colors -d",
+    "build": "webpack --config client/config/webpack.config.js -p",
+    "watch": "webpack --config client/config/webpack.config.js --progress --colors --watch -d",
     "lite": "lite-server",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
@@ -28,7 +31,12 @@
     "typings": "^0.8.1",
     "webpack": "^1.13.0",
     "concurrently": "^2.0.0",
-    "lite-server": "^2.2.0"
+    "lite-server": "^2.2.0",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "~0.8.1",
+    "node-sass": "^3.4.2",
+    "url-loader": "^0.5.7"
   },
   "dependencies": {
     "@angular/common":  "2.0.0-rc.1",

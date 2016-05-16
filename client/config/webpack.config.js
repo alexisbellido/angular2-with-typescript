@@ -8,11 +8,15 @@ var path = require('path'),
     production = process.env.PRODUCTION === 'true',
     development = process.env.DEVELOPMENT === 'true';
 
-if ( development ) {
-    buildPath = '/home/alexis/zinibu/static/znbmain';
-} else {
-    buildPath = path.resolve(__dirname, '../../static/znbmain');
-}
+//if ( development ) {
+//    buildPath = '/home/alexis/zinibu/static/znbmain';
+//} else {
+//    buildPath = path.resolve(__dirname, '../../static/znbmain');
+//}
+
+buildPath = path.resolve(__dirname, '../../static');
+console.log(`dirname ${__dirname}`);
+console.log('buildPath ' + buildPath);
 
 module.exports = {
     context: path.resolve(__dirname, '../app'),
@@ -31,7 +35,7 @@ module.exports = {
         filename: 'js/[name].bundle.js'
     },
     resolve: {
-        extensions: ['', '.js', '.ts']
+        extensions: ['', '.js', '.ts', 'tsx']
     },
     plugins: [
         new ExtractTextPlugin('css/styles.css'),
@@ -48,15 +52,7 @@ module.exports = {
     module: {
         loaders: [
             {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'babel',
-                query: {
-                    presets: ['es2015']
-                }
-            },
-            {
-                test: /\.ts$/,
+                test: /\.tsx?$/,
                 loaders: ['ts-loader'],
                 exclude: /node_modules/
             },
