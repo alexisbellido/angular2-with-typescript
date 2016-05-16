@@ -10,6 +10,7 @@
     "build": "webpack --config client/config/webpack.config.js -p",
     "watch": "webpack --config client/config/webpack.config.js --progress --colors --watch -d",
     "lite": "lite-server",
+    "postinstall": "typings install",
     "tsc": "tsc",
     "tsc:w": "tsc -w",
     "typings": "typings"
@@ -25,18 +26,22 @@
   },
   "homepage": "https://github.com/alexisbellido/angular2-with-typescript",
   "devDependencies": {
-    "source-map-loader": "^0.1.5",
-    "ts-loader": "^0.8.2",
-    "typescript": "^1.8.10",
-    "typings": "^0.8.1",
-    "webpack": "^1.13.0",
+    "autoprefixer-loader": "^3.2.0",
     "concurrently": "^2.0.0",
-    "lite-server": "^2.2.0",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "~0.8.1",
+    "lite-server": "^2.2.0",
     "node-sass": "^3.4.2",
-    "url-loader": "^0.5.7"
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^3.0.0",
+    "source-map-loader": "^0.1.5",
+    "style-loader": "^0.13.1",
+    "ts-loader": "^0.8.2",
+    "typescript": "^1.8.10",
+    "typings": "^0.8.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.0"
   },
   "dependencies": {
     "@angular/common":  "2.0.0-rc.1",
@@ -49,7 +54,6 @@
     "@angular/router-deprecated":  "2.0.0-rc.1",
     "@angular/upgrade":  "2.0.0-rc.1",
 
-    "systemjs": "0.19.27",
     "es6-shim": "^0.35.0",
     "es6-promise": "^3.2.1",
     "reflect-metadata": "^0.1.3",

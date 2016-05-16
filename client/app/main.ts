@@ -1,15 +1,10 @@
-function greeter(person) {
-    return "Hello, " + person;
+import { bootstrap } from '@angular/platform-browser-dynamic';
+import { enableProdMode } from '@angular/core';
+
+import { AppComponent } from './app.component';
+
+if (process.env.ENV === 'production') {
+    enableProdMode();
 }
 
-var user = "Paco Miau";
-
-console.log(greeter(user));  
-
-import { foo } from "./circle";
-console.log('foo: ' + foo);
-
-import { PI } from "./circle";
-
-import { area } from "./circle";
-console.log(`Area for circle of radius 5: ${area(5)}`);
+bootstrap(AppComponent, []);

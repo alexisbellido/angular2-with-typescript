@@ -1,0 +1,9 @@
+@import "partials/colors";
+
+body {
+	background-color: pink;
+}
+
+h1 {
+    color: $color-headline;
+}

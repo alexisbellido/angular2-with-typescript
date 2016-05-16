@@ -3,20 +3,15 @@ var path = require('path'),
     appRoot = path.resolve(__dirname, '../app'),
     webpack = require('webpack'),
     buildPath,
-    ExtractTextPlugin = require('extract-text-webpack-plugin'),
-// Get value from command line
-    production = process.env.PRODUCTION === 'true',
-    development = process.env.DEVELOPMENT === 'true';
+    ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-//if ( development ) {
-//    buildPath = '/home/alexis/zinibu/static/znbmain';
-//} else {
-//    buildPath = path.resolve(__dirname, '../../static/znbmain');
-//}
+// Any script from packaje.json can receive an environment variable like this:
+// ENV=production npm run watch
+// and this can be used by webpack.DefinePlugin and passed to client/app/main.ts
+const ENV = process.env.ENV;
 
+//buildPath = path.resolve(__dirname, '../../static/znbmain');
 buildPath = path.resolve(__dirname, '../../static');
-console.log(`dirname ${__dirname}`);
-console.log('buildPath ' + buildPath);
 
 module.exports = {
     context: path.resolve(__dirname, '../app'),
@@ -27,6 +22,9 @@ module.exports = {
         ],
         vendor: [
             './vendor.ts',
+        ],
+        polyfills: [
+            './polyfills.ts',
         ]
     },
     output: {
@@ -34,14 +32,21 @@ module.exports = {
         publicPath: '../',
         filename: 'js/[name].bundle.js'
     },
+    // Enable sourcemaps for debugging webpack's output.
+    devtool: "source-map",
     resolve: {
         extensions: ['', '.js', '.ts', 'tsx']
     },
     plugins: [
         new ExtractTextPlugin('css/styles.css'),
         new webpack.optimize.CommonsChunkPlugin({
-            name: 'vendor',
+            name: ['main', 'vendor', 'polyfills'],
             minChunks: Infinity
+        }),
+        new webpack.DefinePlugin({
+            'process.env': {
+                'ENV': JSON.stringify(ENV)
+            }
         }),
         new webpack.optimize.UglifyJsPlugin({
             compress: {
