@@ -1,6 +1,7 @@
 "use strict";
 
 const circle = require('./circle.js');
+const square = require('./square.js');
 
 const radius = 5.25;
 
@@ -14,3 +15,6 @@ console.log(`some sum ${circle.sum(3, 7)}`);
 
 let duplicate = num => num * 2;
 console.log('duplicate of 4: ' + duplicate(4));
+
+let mySquare = square(3);
+console.log(`mySquare.area(): ${mySquare.area()}`);
