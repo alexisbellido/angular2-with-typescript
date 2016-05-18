@@ -12,6 +12,9 @@ var path = require('path'),
 
 let ENV = process.env.ENV || 'development';
 
+// alternative for production check
+// let isProduction = process.argv.indexOf('-p') !== -1;
+
 buildPath = path.resolve(__dirname, '../../static');
 
 module.exports = {
@@ -96,6 +99,9 @@ if ('production' === ENV) {
   );
   module.exports.plugins.push(
     new webpack.optimize.DedupePlugin()
+  );
+  module.exports.plugins.push(
+    new webpack.optimize.AggressiveMergingPlugin()
   );
 } else {
   // Enable sourcemaps for debugging webpack's output.
