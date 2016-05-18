@@ -6,10 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
-    "webpack": "webpack --config client/config/webpack.config.js --progress --colors -d",
-    "build": "webpack --config client/config/webpack.config.js -p",
+    "build": "ENV=production webpack --config client/config/webpack.config.js -p",
     "watch": "webpack --config client/config/webpack.config.js --progress --colors --watch -d",
-    "watch-prod": "webpack --config client/config/webpack.config.js --progress --colors --watch -p",
     "lite": "lite-server",
     "postinstall": "typings install",
     "tsc": "tsc",
