@@ -9,6 +9,7 @@
     "webpack": "webpack --config client/config/webpack.config.js --progress --colors -d",
     "build": "webpack --config client/config/webpack.config.js -p",
     "watch": "webpack --config client/config/webpack.config.js --progress --colors --watch -d",
+    "watch-prod": "webpack --config client/config/webpack.config.js --progress --colors --watch -p",
     "lite": "lite-server",
     "postinstall": "typings install",
     "tsc": "tsc",
