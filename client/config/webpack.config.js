@@ -5,12 +5,12 @@ var path = require('path'),
     buildPath,
     ExtractTextPlugin = require('extract-text-webpack-plugin');
 
-// Any script from packaje.json can receive an environment variable like this:
-// ENV=production npm run watch
-// and this can be used by webpack.DefinePlugin and passed to client/app/main.ts
-// or used in this configuration, see UglifyJsPlugin below.
+// Any script from packaje.json can receive an environment value like this:
+// NODE_ENV=production npm run watch
+// process.env.NODE_ENV is conventionally used and the value can be used by webpack.DefinePlugin to pass to other modules
+// or used here in webpack.config.js. See UglifyJsPlugin below.
 
-let ENV = process.env.ENV || 'development';
+let NODE_ENV = process.env.NODE_ENV || 'development';
 
 // alternative for production check
 // let isProduction = process.argv.indexOf('-p') !== -1;
@@ -47,7 +47,7 @@ module.exports = {
         }),
         new webpack.DefinePlugin({
             'process.env': {
-                'ENV': JSON.stringify(ENV)
+                'NODE_ENV': JSON.stringify(NODE_ENV)
             }
         })
     ],
@@ -86,7 +86,7 @@ module.exports = {
 
 // UglifyJsPlugin and OccurrenceOrderPlugin run anyway with -p (alias for --optimize-minimize and --optimize-occurrence-order)
 // but we have extra control here, disabling warnings, for example.
-if ('production' === ENV) {
+if ('production' === NODE_ENV) {
   module.exports.plugins.push(
     new webpack.optimize.UglifyJsPlugin({
         compress: {
