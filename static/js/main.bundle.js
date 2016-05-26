@@ -7,7 +7,7 @@ webpackJsonp([0],{
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(/*! ./main.ts */1);
-	module.exports = __webpack_require__(/*! ../scss/main.scss */283);
+	module.exports = __webpack_require__(/*! ../scss/main.scss */285);
 
 
 /***/ },
@@ -77,16 +77,16 @@ webpackJsonp([0],{
 	function calcTax(income, dependents, state) {
 	    if (state === void 0) { state = 'NY'; }
 	    console.log("State: " + state);
-	    if (state == 'NY') {
+	    if (state === 'NY') {
 	        return income * 0.06 - dependents * 500;
 	    }
-	    else if (state == 'NJ') {
+	    else if (state === 'NJ') {
 	        return income * 0.05 - dependents * 500;
 	    }
 	}
 	console.log("The tax is " + calcTax(150000, 2, 'NJ'));
 	console.log("The tax for NY is " + calcTax(175000, 3));
-	var person_1 = __webpack_require__(/*! ./person */ 625);
+	var person_1 = __webpack_require__(/*! ./person */ 283);
 	var p = new person_1.Person('Juan', 'Perez', 53, '353-321');
 	console.log(p);
 	console.log("ssn is private");
@@ -97,7 +97,8 @@ webpackJsonp([0],{
 	console.log("Employee is");
 	console.log(e);
 	e.doSomething(2);
-	var animal_1 = __webpack_require__(/*! ./animal */ 627);
+	var e2 = new person_1.Employee('Mike', 'Tutu', 32, '11122', 'IT');
+	var animal_1 = __webpack_require__(/*! ./animal */ 284);
 	var a = new animal_1.Animal();
 	var workers = [];
 	workers[0] = p;
@@ -109,7 +110,7 @@ webpackJsonp([0],{
 
 /***/ 281:
 /*!**************************!*\
-  !*** ./app.component.ts ***!
+  !*** ./app.component.js ***!
   \**************************/
 /***/ function(module, exports, __webpack_require__) {
 
@@ -130,20 +131,20 @@ webpackJsonp([0],{
 	    AppComponent = __decorate([
 	        core_1.Component({
 	            selector: 'my-app',
-	            template: '<h1>Angular 2 Application goes here</h1>'
+	            template: '<h1>Angular 2 app starts here</h1>'
 	        }), 
 	        __metadata('design:paramtypes', [])
 	    ], AppComponent);
 	    return AppComponent;
 	}());
 	exports.AppComponent = AppComponent;
-
+	//# sourceMappingURL=app.component.js.map
 
 /***/ },
 
 /***/ 282:
 /*!*****************!*\
-  !*** ./math.ts ***!
+  !*** ./math.js ***!
   \*****************/
 /***/ function(module, exports) {
 
@@ -160,23 +161,13 @@ webpackJsonp([0],{
 	    }
 	}
 	exports.sayBye = sayBye;
-
+	//# sourceMappingURL=math.js.map
 
 /***/ },
 
 /***/ 283:
-/*!*************************!*\
-  !*** ../scss/main.scss ***!
-  \*************************/
-/***/ function(module, exports) {
-
-	// removed by extract-text-webpack-plugin
-
-/***/ },
-
-/***/ 625:
 /*!*******************!*\
-  !*** ./person.ts ***!
+  !*** ./person.js ***!
   \*******************/
 /***/ function(module, exports) {
 
@@ -230,13 +221,13 @@ webpackJsonp([0],{
 	    return Employee;
 	}(Person));
 	exports.Employee = Employee;
-
+	//# sourceMappingURL=person.js.map
 
 /***/ },
 
-/***/ 627:
+/***/ 284:
 /*!*******************!*\
-  !*** ./animal.ts ***!
+  !*** ./animal.js ***!
   \*******************/
 /***/ function(module, exports) {
 
@@ -247,7 +238,17 @@ webpackJsonp([0],{
 	    return Animal;
 	}());
 	exports.Animal = Animal;
+	//# sourceMappingURL=animal.js.map
 
+/***/ },
+
+/***/ 285:
+/*!*************************!*\
+  !*** ../scss/main.scss ***!
+  \*************************/
+/***/ function(module, exports) {
+
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 
