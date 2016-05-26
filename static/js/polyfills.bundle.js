@@ -102,36 +102,36 @@
   \***********************/
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(/*! ./polyfills.ts */286);
+	module.exports = __webpack_require__(/*! ./polyfills.ts */287);
 
 
 /***/ },
 
-/***/ 286:
+/***/ 287:
 /*!**********************!*\
   !*** ./polyfills.ts ***!
   \**********************/
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	__webpack_require__(/*! es6-shim */ 287);
-	__webpack_require__(/*! reflect-metadata */ 289);
-	__webpack_require__(/*! zone.js/dist/zone */ 312);
+	__webpack_require__(/*! es6-shim */ 288);
+	__webpack_require__(/*! reflect-metadata */ 290);
+	__webpack_require__(/*! zone.js/dist/zone */ 313);
 	if (false) {
 	}
 	else {
 	    // Development
 	    Error['stackTraceLimit'] = Infinity;
-	    __webpack_require__(/*! zone.js/dist/long-stack-trace-zone */ 313);
+	    __webpack_require__(/*! zone.js/dist/long-stack-trace-zone */ 314);
 	}
 
 
 /***/ },
 
-/***/ 287:
-/*!***************************************************************************!*\
-  !*** /Users/alexis/Learn/angular2-with-typescript/~/es6-shim/es6-shim.js ***!
-  \***************************************************************************/
+/***/ 288:
+/*!**************************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/es6-shim/es6-shim.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/* WEBPACK VAR INJECTION */(function(global, process) { /*!
@@ -3912,14 +3912,14 @@
 	  return globals;
 	}));
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 288)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(/*! /home/alexis/Learn/angular2-with-typescript/~/process/browser.js */ 289)))
 
 /***/ },
 
-/***/ 288:
-/*!**********************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/process/browser.js ***!
-  \**********************************************************/
+/***/ 289:
+/*!************************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/process/browser.js ***!
+  \************************************************************************/
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -4020,10 +4020,10 @@
 
 /***/ },
 
-/***/ 289:
-/*!**********************************************************************************!*\
-  !*** /Users/alexis/Learn/angular2-with-typescript/~/reflect-metadata/Reflect.js ***!
-  \**********************************************************************************/
+/***/ 290:
+/*!*********************************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/reflect-metadata/Reflect.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/*! *****************************************************************************
@@ -4865,7 +4865,7 @@
 	    function CreateWeakMapPolyfill() {
 	        var UUID_SIZE = 16;
 	        var isNode = typeof global !== "undefined" && Object.prototype.toString.call(global.process) === '[object process]';
-	        var nodeCrypto = isNode && __webpack_require__(/*! crypto */ 290);
+	        var nodeCrypto = isNode && __webpack_require__(/*! crypto */ 291);
 	        var hasOwn = Object.prototype.hasOwnProperty;
 	        var keys = {};
 	        var rootKey = CreateUniqueKey();
@@ -4992,13 +4992,13 @@
 
 /***/ },
 
-/***/ 290:
-/*!******************************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/crypto-browserify/index.js ***!
-  \******************************************************************/
+/***/ 291:
+/*!********************************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/crypto-browserify/index.js ***!
+  \********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer) {var rng = __webpack_require__(/*! ./rng */ 295)
+	/* WEBPACK VAR INJECTION */(function(Buffer) {var rng = __webpack_require__(/*! ./rng */ 296)
 	
 	function error () {
 	  var m = [].slice.call(arguments).join(' ')
@@ -5009,9 +5009,9 @@
 	    ].join('\n'))
 	}
 	
-	exports.createHash = __webpack_require__(/*! ./create-hash */ 297)
+	exports.createHash = __webpack_require__(/*! ./create-hash */ 298)
 	
-	exports.createHmac = __webpack_require__(/*! ./create-hmac */ 309)
+	exports.createHmac = __webpack_require__(/*! ./create-hmac */ 310)
 	
 	exports.randomBytes = function(size, callback) {
 	  if (callback && callback.call) {
@@ -5032,7 +5032,7 @@
 	  return ['sha1', 'sha256', 'sha512', 'md5', 'rmd160']
 	}
 	
-	var p = __webpack_require__(/*! ./pbkdf2 */ 310)(exports)
+	var p = __webpack_require__(/*! ./pbkdf2 */ 311)(exports)
 	exports.pbkdf2 = p.pbkdf2
 	exports.pbkdf2Sync = p.pbkdf2Sync
 	
@@ -5052,14 +5052,14 @@
 	  }
 	})
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 291).Buffer))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /home/alexis/Learn/angular2-with-typescript/~/buffer/index.js */ 292).Buffer))
 
 /***/ },
 
-/***/ 291:
-/*!*******************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/buffer/index.js ***!
-  \*******************************************************/
+/***/ 292:
+/*!*********************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/buffer/index.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer, global) {/*!
@@ -5072,9 +5072,9 @@
 	
 	'use strict'
 	
-	var base64 = __webpack_require__(/*! base64-js */ 292)
-	var ieee754 = __webpack_require__(/*! ieee754 */ 293)
-	var isArray = __webpack_require__(/*! isarray */ 294)
+	var base64 = __webpack_require__(/*! base64-js */ 293)
+	var ieee754 = __webpack_require__(/*! ieee754 */ 294)
+	var isArray = __webpack_require__(/*! isarray */ 295)
 	
 	exports.Buffer = Buffer
 	exports.SlowBuffer = SlowBuffer
@@ -6611,14 +6611,14 @@
 	  return i
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 291).Buffer, (function() { return this; }())))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /home/alexis/Learn/angular2-with-typescript/~/buffer/index.js */ 292).Buffer, (function() { return this; }())))
 
 /***/ },
 
-/***/ 292:
-/*!*********************************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/buffer/~/base64-js/lib/b64.js ***!
-  \*********************************************************************/
+/***/ 293:
+/*!**************************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/base64-js/lib/b64.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var lookup = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/';
@@ -6749,10 +6749,10 @@
 
 /***/ },
 
-/***/ 293:
-/*!*****************************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/buffer/~/ieee754/index.js ***!
-  \*****************************************************************/
+/***/ 294:
+/*!**********************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/ieee754/index.js ***!
+  \**********************************************************************/
 /***/ function(module, exports) {
 
 	exports.read = function (buffer, offset, isLE, mLen, nBytes) {
@@ -6843,10 +6843,10 @@
 
 /***/ },
 
-/***/ 294:
-/*!*****************************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/buffer/~/isarray/index.js ***!
-  \*****************************************************************/
+/***/ 295:
+/*!**********************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/isarray/index.js ***!
+  \**********************************************************************/
 /***/ function(module, exports) {
 
 	var toString = {}.toString;
@@ -6858,16 +6858,16 @@
 
 /***/ },
 
-/***/ 295:
-/*!****************************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/crypto-browserify/rng.js ***!
-  \****************************************************************/
+/***/ 296:
+/*!******************************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/crypto-browserify/rng.js ***!
+  \******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, Buffer) {(function() {
 	  var g = ('undefined' === typeof window ? global : window) || {}
 	  _crypto = (
-	    g.crypto || g.msCrypto || __webpack_require__(/*! crypto */ 296)
+	    g.crypto || g.msCrypto || __webpack_require__(/*! crypto */ 297)
 	  )
 	  module.exports = function(size) {
 	    // Modern Browsers
@@ -6891,11 +6891,11 @@
 	  }
 	}())
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 291).Buffer))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(/*! /home/alexis/Learn/angular2-with-typescript/~/buffer/index.js */ 292).Buffer))
 
 /***/ },
 
-/***/ 296:
+/***/ 297:
 /*!************************!*\
   !*** crypto (ignored) ***!
   \************************/
@@ -6905,16 +6905,16 @@
 
 /***/ },
 
-/***/ 297:
-/*!************************************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/crypto-browserify/create-hash.js ***!
-  \************************************************************************/
+/***/ 298:
+/*!**************************************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/crypto-browserify/create-hash.js ***!
+  \**************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer) {var createHash = __webpack_require__(/*! sha.js */ 298)
+	/* WEBPACK VAR INJECTION */(function(Buffer) {var createHash = __webpack_require__(/*! sha.js */ 299)
 	
-	var md5 = toConstructor(__webpack_require__(/*! ./md5 */ 306))
-	var rmd160 = toConstructor(__webpack_require__(/*! ripemd160 */ 308))
+	var md5 = toConstructor(__webpack_require__(/*! ./md5 */ 307))
+	var rmd160 = toConstructor(__webpack_require__(/*! ripemd160 */ 309))
 	
 	function toConstructor (fn) {
 	  return function () {
@@ -6942,14 +6942,14 @@
 	  return createHash(alg)
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 291).Buffer))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /home/alexis/Learn/angular2-with-typescript/~/buffer/index.js */ 292).Buffer))
 
 /***/ },
 
-/***/ 298:
-/*!***************************************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/crypto-browserify/~/sha.js/index.js ***!
-  \***************************************************************************/
+/***/ 299:
+/*!*********************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/sha.js/index.js ***!
+  \*********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	var exports = module.exports = function (alg) {
@@ -6958,20 +6958,20 @@
 	  return new Alg()
 	}
 	
-	var Buffer = __webpack_require__(/*! buffer */ 291).Buffer
-	var Hash   = __webpack_require__(/*! ./hash */ 299)(Buffer)
+	var Buffer = __webpack_require__(/*! buffer */ 292).Buffer
+	var Hash   = __webpack_require__(/*! ./hash */ 300)(Buffer)
 	
-	exports.sha1 = __webpack_require__(/*! ./sha1 */ 300)(Buffer, Hash)
-	exports.sha256 = __webpack_require__(/*! ./sha256 */ 304)(Buffer, Hash)
-	exports.sha512 = __webpack_require__(/*! ./sha512 */ 305)(Buffer, Hash)
+	exports.sha1 = __webpack_require__(/*! ./sha1 */ 301)(Buffer, Hash)
+	exports.sha256 = __webpack_require__(/*! ./sha256 */ 305)(Buffer, Hash)
+	exports.sha512 = __webpack_require__(/*! ./sha512 */ 306)(Buffer, Hash)
 
 
 /***/ },
 
-/***/ 299:
-/*!**************************************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/crypto-browserify/~/sha.js/hash.js ***!
-  \**************************************************************************/
+/***/ 300:
+/*!********************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/sha.js/hash.js ***!
+  \********************************************************************/
 /***/ function(module, exports) {
 
 	module.exports = function (Buffer) {
@@ -7055,10 +7055,10 @@
 
 /***/ },
 
-/***/ 300:
-/*!**************************************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/crypto-browserify/~/sha.js/sha1.js ***!
-  \**************************************************************************/
+/***/ 301:
+/*!********************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/sha.js/sha1.js ***!
+  \********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -7070,7 +7070,7 @@
 	 * See http://pajhome.org.uk/crypt/md5 for details.
 	 */
 	
-	var inherits = __webpack_require__(/*! util */ 301).inherits
+	var inherits = __webpack_require__(/*! util */ 302).inherits
 	
 	module.exports = function (Buffer, Hash) {
 	
@@ -7203,10 +7203,10 @@
 
 /***/ },
 
-/***/ 301:
-/*!****************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/util/util.js ***!
-  \****************************************************/
+/***/ 302:
+/*!******************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/util/util.js ***!
+  \******************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process) {// Copyright Joyent, Inc. and other Node contributors.
@@ -7734,7 +7734,7 @@
 	}
 	exports.isPrimitive = isPrimitive;
 	
-	exports.isBuffer = __webpack_require__(/*! ./support/isBuffer */ 302);
+	exports.isBuffer = __webpack_require__(/*! ./support/isBuffer */ 303);
 	
 	function objectToString(o) {
 	  return Object.prototype.toString.call(o);
@@ -7778,7 +7778,7 @@
 	 *     prototype.
 	 * @param {function} superCtor Constructor function to inherit prototype from.
 	 */
-	exports.inherits = __webpack_require__(/*! inherits */ 303);
+	exports.inherits = __webpack_require__(/*! inherits */ 304);
 	
 	exports._extend = function(origin, add) {
 	  // Don't do anything if add isn't an object
@@ -7796,14 +7796,14 @@
 	  return Object.prototype.hasOwnProperty.call(obj, prop);
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 288)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(/*! /home/alexis/Learn/angular2-with-typescript/~/process/browser.js */ 289)))
 
 /***/ },
 
-/***/ 302:
-/*!***********************************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/util/support/isBufferBrowser.js ***!
-  \***********************************************************************/
+/***/ 303:
+/*!*************************************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/util/support/isBufferBrowser.js ***!
+  \*************************************************************************************/
 /***/ function(module, exports) {
 
 	module.exports = function isBuffer(arg) {
@@ -7815,10 +7815,10 @@
 
 /***/ },
 
-/***/ 303:
-/*!***************************************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/util/~/inherits/inherits_browser.js ***!
-  \***************************************************************************/
+/***/ 304:
+/*!**********************************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/inherits/inherits_browser.js ***!
+  \**********************************************************************************/
 /***/ function(module, exports) {
 
 	if (typeof Object.create === 'function') {
@@ -7848,10 +7848,10 @@
 
 /***/ },
 
-/***/ 304:
-/*!****************************************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/crypto-browserify/~/sha.js/sha256.js ***!
-  \****************************************************************************/
+/***/ 305:
+/*!**********************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/sha.js/sha256.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	
@@ -7863,7 +7863,7 @@
 	 *
 	 */
 	
-	var inherits = __webpack_require__(/*! util */ 301).inherits
+	var inherits = __webpack_require__(/*! util */ 302).inherits
 	
 	module.exports = function (Buffer, Hash) {
 	
@@ -8005,13 +8005,13 @@
 
 /***/ },
 
-/***/ 305:
-/*!****************************************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/crypto-browserify/~/sha.js/sha512.js ***!
-  \****************************************************************************/
+/***/ 306:
+/*!**********************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/sha.js/sha512.js ***!
+  \**********************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var inherits = __webpack_require__(/*! util */ 301).inherits
+	var inherits = __webpack_require__(/*! util */ 302).inherits
 	
 	module.exports = function (Buffer, Hash) {
 	  var K = [
@@ -8259,10 +8259,10 @@
 
 /***/ },
 
-/***/ 306:
-/*!****************************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/crypto-browserify/md5.js ***!
-  \****************************************************************/
+/***/ 307:
+/*!******************************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/crypto-browserify/md5.js ***!
+  \******************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -8274,7 +8274,7 @@
 	 * See http://pajhome.org.uk/crypt/md5 for more info.
 	 */
 	
-	var helpers = __webpack_require__(/*! ./helpers */ 307);
+	var helpers = __webpack_require__(/*! ./helpers */ 308);
 	
 	/*
 	 * Calculate the MD5 of an array of little-endian words, and a bit length
@@ -8424,10 +8424,10 @@
 
 /***/ },
 
-/***/ 307:
-/*!********************************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/crypto-browserify/helpers.js ***!
-  \********************************************************************/
+/***/ 308:
+/*!**********************************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/crypto-browserify/helpers.js ***!
+  \**********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {var intSize = 4;
@@ -8465,14 +8465,14 @@
 	
 	module.exports = { hash: hash };
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 291).Buffer))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /home/alexis/Learn/angular2-with-typescript/~/buffer/index.js */ 292).Buffer))
 
 /***/ },
 
-/***/ 308:
-/*!**************************************************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/crypto-browserify/~/ripemd160/lib/ripemd160.js ***!
-  \**************************************************************************************/
+/***/ 309:
+/*!********************************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/ripemd160/lib/ripemd160.js ***!
+  \********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {
@@ -8681,17 +8681,17 @@
 	
 	
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 291).Buffer))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /home/alexis/Learn/angular2-with-typescript/~/buffer/index.js */ 292).Buffer))
 
 /***/ },
 
-/***/ 309:
-/*!************************************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/crypto-browserify/create-hmac.js ***!
-  \************************************************************************/
+/***/ 310:
+/*!**************************************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/crypto-browserify/create-hmac.js ***!
+  \**************************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	/* WEBPACK VAR INJECTION */(function(Buffer) {var createHash = __webpack_require__(/*! ./create-hash */ 297)
+	/* WEBPACK VAR INJECTION */(function(Buffer) {var createHash = __webpack_require__(/*! ./create-hash */ 298)
 	
 	var zeroBuffer = new Buffer(128)
 	zeroBuffer.fill(0)
@@ -8735,17 +8735,17 @@
 	}
 	
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 291).Buffer))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /home/alexis/Learn/angular2-with-typescript/~/buffer/index.js */ 292).Buffer))
 
 /***/ },
 
-/***/ 310:
-/*!*******************************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/crypto-browserify/pbkdf2.js ***!
-  \*******************************************************************/
+/***/ 311:
+/*!*********************************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/crypto-browserify/pbkdf2.js ***!
+  \*********************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
-	var pbkdf2Export = __webpack_require__(/*! pbkdf2-compat/pbkdf2 */ 311)
+	var pbkdf2Export = __webpack_require__(/*! pbkdf2-compat/pbkdf2 */ 312)
 	
 	module.exports = function (crypto, exports) {
 	  exports = exports || {}
@@ -8761,10 +8761,10 @@
 
 /***/ },
 
-/***/ 311:
-/*!***********************************************************************************!*\
-  !*** (webpack)/~/node-libs-browser/~/crypto-browserify/~/pbkdf2-compat/pbkdf2.js ***!
-  \***********************************************************************************/
+/***/ 312:
+/*!*****************************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/pbkdf2-compat/pbkdf2.js ***!
+  \*****************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {module.exports = function(crypto) {
@@ -8852,14 +8852,14 @@
 	  }
 	}
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/buffer/index.js */ 291).Buffer))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /home/alexis/Learn/angular2-with-typescript/~/buffer/index.js */ 292).Buffer))
 
 /***/ },
 
-/***/ 312:
-/*!***************************************************************************!*\
-  !*** /Users/alexis/Learn/angular2-with-typescript/~/zone.js/dist/zone.js ***!
-  \***************************************************************************/
+/***/ 313:
+/*!**************************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/zone.js/dist/zone.js ***!
+  \**************************************************************************/
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {/******/ (function(modules) { // webpackBootstrap
@@ -10177,14 +10177,14 @@
 	
 	/***/ }
 	/******/ ]);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! (webpack)/~/node-libs-browser/~/process/browser.js */ 288)))
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(/*! /home/alexis/Learn/angular2-with-typescript/~/process/browser.js */ 289)))
 
 /***/ },
 
-/***/ 313:
-/*!********************************************************************************************!*\
-  !*** /Users/alexis/Learn/angular2-with-typescript/~/zone.js/dist/long-stack-trace-zone.js ***!
-  \********************************************************************************************/
+/***/ 314:
+/*!*******************************************************************************************!*\
+  !*** /home/alexis/Learn/angular2-with-typescript/~/zone.js/dist/long-stack-trace-zone.js ***!
+  \*******************************************************************************************/
 /***/ function(module, exports) {
 
 	/******/ (function(modules) { // webpackBootstrap
